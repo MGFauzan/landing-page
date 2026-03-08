@@ -88,16 +88,6 @@ npm run build
 npm start
 ```
 
-## 🌐 Deploy to Vercel
-
-```bash
-npx vercel
-```
-
-Or push to GitHub and connect to Vercel at [vercel.com](https://vercel.com).
-
-Add environment variables in the Vercel dashboard under **Settings → Environment Variables**.
-
 ## 🎮 Dino Game Controls
 
 | Control | Action |
