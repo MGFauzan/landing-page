@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+@import '../styles/animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #040d1a;
+  --card: rgba(8, 20, 40, 0.85);
+  --accent: #06ffa5;
+  --emerald: #10b981;
+  --cyan: #06b6d4;
+  --text: #e2ebf8;
+  --muted: #64748b;
+  --border: rgba(6, 255, 165, 0.12);
+  --border-h: rgba(6, 255, 165, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .btn-primary {
+    @apply font-bold rounded-[10px] cursor-pointer transition-all duration-300;
+    background: linear-gradient(135deg, #06ffa5, #10b981);
+    color: #030b14;
+    font-family: 'Syne', sans-serif;
+    border: none;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 35px rgba(6, 255, 165, 0.55);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    @apply bg-transparent rounded-[10px] cursor-pointer transition-all duration-300;
+    border: 1px solid rgba(6, 255, 165, 0.4);
+    color: #06ffa5;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+  }
+  .btn-outline:hover {
+    background: rgba(6, 255, 165, 0.08);
+    border-color: #06ffa5;
+    box-shadow: 0 0 20px rgba(6, 255, 165, 0.25);
+  }
+
+  .nav-link {
+    @apply text-sm font-medium relative transition-colors duration-200;
+    color: #94a3b8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    padding: 4px 0;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #06ffa5;
+    transition: width 0.3s;
+  }
+  .nav-link:hover { color: #06ffa5; }
+  .nav-link:hover::after { width: 100%; }
+
+  .tech-pill {
+    @apply rounded-xl cursor-default transition-all duration-200 whitespace-nowrap;
+    padding: 11px 22px;
+    background: rgba(6, 255, 165, 0.04);
+    border: 1px solid rgba(6, 255, 165, 0.14);
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #cbd5e1;
+  }
+  .tech-pill:hover {
+    background: rgba(6, 255, 165, 0.12);
+    border-color: rgba(6, 255, 165, 0.5);
+    box-shadow: 0 0 20px rgba(6, 255, 165, 0.15);
+    transform: scale(1.07);
+    color: #06ffa5;
+  }
+
+  .proj-card {
+    @apply transition-all duration-300;
+    background: rgba(8, 20, 40, 0.82);
+    border: 1px solid rgba(6, 255, 165, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .proj-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(6, 255, 165, 0.35);
+    box-shadow: 0 12px 48px rgba(6, 255, 165, 0.1);
+  }
+
+  .form-input {
+    @apply w-full rounded-[10px] outline-none transition-all duration-300 block;
+    background: rgba(6, 255, 165, 0.04);
+    border: 1px solid rgba(6, 255, 165, 0.15);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    padding: 12px 16px;
+  }
+  .form-input:focus {
+    border-color: rgba(6, 255, 165, 0.5);
+    box-shadow: 0 0 20px rgba(6, 255, 165, 0.08);
+  }
+  .form-input::placeholder { color: #475569; }
+}
