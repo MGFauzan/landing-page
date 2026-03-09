@@ -171,7 +171,7 @@ export default function CertificationsSection() {
               <div style={{ padding: '16px 16px 0' }}>
                 {cert.preview
                   ? <img src={cert.preview} alt={cert.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', borderRadius: 10, display: 'block' }} />
-                  : <CertPreview title={cert.title} issuer={cert.issuer} color={cert.issuerColor} />
+                  : <CertPreview title={cert.title || ""} issuer={cert.issuer || ""} color={cert.issuerColor || ""} />
                 }
               </div>
 
