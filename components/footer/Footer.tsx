@@ -39,8 +39,20 @@ export default function Footer() {
             </div>
             <div>
               <div style={{ fontFamily: "'Syne',sans-serif", fontSize: 12, fontWeight: 700, color: '#06FFA5', letterSpacing: 3, textTransform: 'uppercase', marginBottom: 14 }}>Contact</div>
-              {[PERSON.email, 'GitHub', 'LinkedIn', 'WhatsApp', 'Instagram'].map((n) => (
-                <div key={n} style={{ marginBottom: 8, fontSize: 14, color: '#64748B' }}>{n}</div>
+              {SOCIALS.map((s) => (
+                  <div key={s.label} style={{ marginBottom: 8 }}>
+                    
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: 14, color: '#64748B', textDecoration: 'none', fontFamily: "'DM Sans',sans-serif", transition: 'color .2s' }}
+                      onMouseEnter={e => (e.currentTarget.style.color = s.color)}
+                      onMouseLeave={e => (e.currentTarget.style.color = '#64748B')}
+                    >
+                      {s.label}
+                    </a>
+                  </div>
+                ))}</div>
               ))}
             </div>
           </div>
