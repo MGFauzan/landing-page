@@ -82,9 +82,9 @@ export const TECHS: string[] = [
 export const SOCIALS: SocialLink[] = [
   { icon: '💬', label: 'WhatsApp', val: '+62 xxx-xxxx-xxxx', color: '#25D366', href: 'https://wa.me/621222939029' },
   { icon: '📧', label: 'Email', val: 'mgfauzan05@gmail.com', color: '#06FFA5', href: 'mailto:mgfauzan05@gmail.com' },
-  { icon: '💼', label: 'LinkedIn', val: '/in/mgfauzan', color: '#0A66C2', href: 'https://linkedin.com/in/mgfauzan' },
-  { icon: '🐙', label: 'GitHub', val: '@blackmarshall02', color: '#E2EBF8', href: 'https://github.com/blackmarshall02' },
-  { icon: '📸', label: 'Instagram', val: '@yastfauzan_', color: '#E1306C', href: 'https://instagram.com/yastfauzan_' },
+  { icon: '💼', label: 'LinkedIn', val: 'Muhammad Ghiyyast Fauzan', color: '#0A66C2', href: 'https://linkedin.com/in/mgfauzan' },
+  { icon: '🐙', label: 'GitHub', val: 'MGFauzan', color: '#E2EBF8', href: 'https://github.com/mgfauzan' },
+  { icon: '📸', label: 'Instagram', val: 'yastfauzan_', color: '#E1306C', href: 'https://instagram.com/yastfauzan_' },
 ];
 
 export const NAV_ITEMS = ['Home', 'About', 'Resume', 'Projects', 'Game', 'Certifications', 'Contact'];
